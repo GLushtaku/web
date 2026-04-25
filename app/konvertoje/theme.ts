@@ -49,18 +49,7 @@ export const GLOBAL_CSS = `
     -webkit-font-smoothing: antialiased;
     transition: background .3s, color .3s;
   }
-/* Hero buttons — equal width on mobile */
-@media (max-width: 520px) {
-  .hero-btns {
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  .hero-btns button {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-  }
-}
+
   :root {
     --font-display: 'Fraunces', serif;
     --font-body:    'Plus Jakarta Sans', sans-serif;
@@ -110,8 +99,16 @@ export const GLOBAL_CSS = `
     .footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
     .conv-grid   { grid-template-columns: repeat(2,1fr) !important; }
   }
-  @media (max-width: 420px) {
-    .conv-grid   { grid-template-columns: 1fr !important; }
+
+/* ── Hero buttons — mobile ── */
+  @media (max-width: 520px) {
+    .hero-btns {
+      flex-direction: column !important;
+      align-items: center !important;
+      width: 100%;
+    }
+    .hero-btns button {
+      width: 260px !important;
+    }
   }
 `;
-

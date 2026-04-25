@@ -65,14 +65,28 @@ export function HomePage({ setPage, theme }: { setPage: (p: Page) => void; theme
           }}>
             Word, PDF, PowerPoint, Excel dhe imazhe — konverto pa instalime, pa regjistrim, plotësisht falas.
           </p>
-          <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
-            <BtnPrimary onClick={() => setPage("convert")} style={{ padding:"14px 34px", fontSize:"1rem" }}>
-              ▲ Ngarko skedarin tënd
-            </BtnPrimary>
-            <BtnGhost onClick={() => setPage("about")} style={{ padding:"14px 28px", fontSize:"1rem" }}>
-              Si funksionon?
-            </BtnGhost>
-          </div>
+          <div className="hero-btns" style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
+  <button
+    onClick={() => setPage("convert")}
+    style={{
+      background:"var(--accent)", color:"#fff", border:"none",
+      padding:"13px 34px", borderRadius:11, fontSize:"1rem",
+      fontFamily:"var(--font-body)", fontWeight:600, cursor:"pointer",
+      boxShadow:"0 0 28px rgba(108,99,255,.38)", lineHeight:1.4,
+    }}
+  >▲ Ngarko skedarin tënd</button>
+
+  <button
+    onClick={() => setPage("about")}
+    style={{
+      background:"transparent", color:"var(--text2)",
+      border:"1px solid var(--border2)",
+      padding:"13px 34px", borderRadius:11, fontSize:"1rem",
+      fontFamily:"var(--font-body)", fontWeight:500, cursor:"pointer",
+      lineHeight:1.4,
+    }}
+  >Si funksionon?</button>
+</div>
         </div>
       </section>
 
